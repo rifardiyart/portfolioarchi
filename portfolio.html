@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magical Alice Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+/* Reset & Body */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Montserrat', sans-serif; background: linear-gradient(to bottom, #4B0082, #8A2BE2); color: #fff; overflow-x: hidden; }
+
+/* Magical Dust Canvas */
+#dust { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1; }
+
+/* Header */
+header { text-align: center; padding: 100px 20px; position: relative; z-index: 2; }
+header h1 { font-family: 'Great Vibes', cursive; font-size: 60px; color: #FFD700; text-shadow: 0 0 10px #fff, 0 0 20px #FFD700; }
+header p { font-size: 18px; margin-top: 10px; color: #fff; text-shadow: 0 0 5px #000; }
+
+/* Navigation */
+nav { display: flex; justify-content: center; gap: 30px; padding: 20px; position: sticky; top:0; background: rgba(75,0,130,0.4); backdrop-filter: blur(5px); z-index:3; }
+nav a { text-decoration: none; color: #FFD700; font-weight: bold; transition: 0.3s; }
+nav a:hover { color: #FF69B4; }
+
+/* Section Titles */
+h2 { text-align: center; margin: 40px 0 20px; color: #FFD700; font-size: 36px; text-shadow: 0 0 5px #fff; }
+
+/* Portfolio Grid */
+.portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 0 20px 60px 20px; position: relative; z-index: 2; }
+.card { position: relative; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); transition: transform 0.3s, opacity 1s; opacity:0; transform: translateY(50px); background: rgba(255,255,255,0.1);}
+.card img { width: 100%; height: auto; display: block; transition: transform 0.5s; border-radius:10px;}
+.card:hover img { transform: scale(1.1); }
+.card .overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(255,215,0,0.8), transparent); color: #000; opacity: 0; transition: 0.5s; }
+.card:hover .overlay { opacity: 1; }
+
+/* Fade-in animation class */
+.fade-in { opacity:1 !important; transform: translateY(0) !important; }
+
+/* Footer */
+footer { text-align: center; padding: 30px 20px; background: rgba(75,0,130,0.4); backdrop-filter: blur(10px); color: #FFD700; position: relative; z-index:2; }
+
+/* Magical floating stars */
+.star { position: absolute; width: 3px; height: 3px; background: #FFD700; border-radius: 50%; opacity: 0.8; animation: twinkle 2s infinite; }
+@keyframes twinkle { 0%,100% {opacity:0.2; transform:scale(1);} 50% {opacity:1; transform:scale(1.5);} }
+</style>
+</head>
+<body>
+
+<!-- Canvas for magical dust -->
+<canvas id="dust"></canvas>
+
+<!-- Header -->
+<header>
+  <h1>Portfolio Architecture</h1>
+  <p>Exploring interior & architectural designs by Rifa Ardiyani Pamungkas, S.Tr.T</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#about">About Me</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <h2>My Work</h2>
+  <div class="portfolio">
+    <div class="card">
+      <img src="https://www.zaha-hadid.com/wp-content/uploads/2019/12/zha_sbt_lobby_hatfields_day_lowres96-918x1080.jpg" alt="Zaha Hadid Architect">
+      <div class="overlay">
+        <h3>Zaha Hadid Architect</h3>
+        <p>SUmmer Internship as Junior Arsitek</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/pageImages/page__en_us_1753284463928__0.webp" alt="IKEA">
+      <div class="overlay">
+        <h3> Inter IKEA Group</h3>
+        <p>Internship as Product Designer </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.adsttc.com/media/images/6377/8f65/5021/9b01/7013/bc28/slideshow/toto-kitchen-showroom-studio-avana_10.jpg?1668779981" alt="Freelance">
+      <div class="overlay">
+        <h3>Fleelance</h3>
+        <p>Drafting and Rendering Dream House</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p style="max-width:600px; margin:auto; text-align:center; color:#fff;">
+    			Lulusan D4 Teknik Infrastruktur Sipil dan Perancangan Arsitektur, Sekolah Vokasi, Universitas Diponegoro, yang memiliki minat besar untuk berkarir dalam dunia arsitektur, Lulus tepat Waktu dengan IPK 3,99. Aktif dalam organisasi kampus seperti BEM Undip dan Himpunan Mahasiswa Sipil Arsitektur. Terampil dalam menggunakan software Teknikdan menguasai aplikasi desain. Memiliki kemampuan untuk bekerja dalam tim serta senang mempelajari hal-hal baru. 
+
+  </p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p style="text-align:center; color:#fff;">Email: <a href="mailto:rifaworke@gmail.com" style="color:#FFD700;">rifaworke@gmail.com</a></p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Portfolio Architecture. All rights reserved.</p>
+</footer>
+
+<script>
+// -------------------------
+// Fade-in on scroll
+const cards = document.querySelectorAll('.card');
+function fadeInOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom) {
+      card.classList.add('fade-in');
+    }
+  });
+}
+window.addEventListener('scroll', fadeInOnScroll);
+fadeInOnScroll(); // initial check
+
+// -------------------------
+// Magical Dust Particle System
+const canvas = document.getElementById('dust');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+const particleCount = 150;
+
+for(let i=0; i<particleCount; i++){
+  particles.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: Math.random()*2 + 1,
+    dx: (Math.random()-0.5)*0.5,
+    dy: (Math.random()-0.5)*0.5,
+    alpha: Math.random()
+  });
+}
+
+function animate() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(255, 215, 0, ${p.alpha})`;
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+    // wrap around edges
+    if(p.x < 0) p.x = canvas.width;
+    if(p.x > canvas.width) p.x = 0;
+    if(p.y < 0) p.y = canvas.height;
+    if(p.y > canvas.height) p.y = 0;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Resize canvas
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
